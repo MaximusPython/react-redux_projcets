@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX Hello World</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- сссылка для подключения библиотеки React (Виртуального DOM) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- сссылка для подключения библиотеки React DOM (Реального DOM) -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- подключили компилятор babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- добавили атрибут type туда где хотим скомпилировать script -->
+    <script type="text/babel">
+      // cоздали компонент с текстом в h1 в виртуальном доме через обьект React,
+      // но показать эти элементы сам React не может, для этого нужно использовать
+      // другую бибилиотеку React Dom
+
+      const helloWorldHeading = <h1>hi my max</h1>
+      // код jcx скомпилированный через компилятор babel
+
+      // чтобы отобразить этот элемент в веб-браузере через React Dom создали
+      // контейнер куда присвоили Dom элемент по id -app
+      const container = document.getElementById('app')
+      const root = ReactDOM.createRoot(container)
+      root.render(helloWorldHeading)
+      // через root мы renderим нужный нам обьект
+    </script>
+  </body>
+</html>
