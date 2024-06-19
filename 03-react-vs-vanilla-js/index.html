@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Hello World</title>
+  </head>
+  <body>
+    <div id="react-app"></div>
+    <div id="vanilla-app"></div>
+    <!-- сссылка для подключения библиотеки React (Виртуального DOM) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- сссылка для подключения библиотеки React DOM (Реального DOM) -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+      // cоздали компонент с текстом в h1 в виртуальном доме через обьект React,
+      // но показать эти элементы сам React не может, для этого нужно использовать
+      // другую бибилиотеку React Dom
+      const reactHeading = React.createElement('h1', null, 'Hello from React') // чтобы отобразить этот элемент в веб-браузере через React Dom создали
+      // контейнер куда присвоили Dom элемент по id -app
+      console.log(reactHeading)
+      const container = document.getElementById('react-app')
+      const root = ReactDOM.createRoot(container)
+      root.render(reactHeading)
+      // через root мы renderим нужный нам обьект
+    </script>
+    <script>
+      // создали еще обьект h1, в нем вызвали метод textContent куда внесли текст
+      const vanillaJsHeading = document.createElement('h1')
+      vanillaJsHeading.textContent = 'Hello from Vanilla JS'
+      console.log(vanillaJsHeading)
+      // нашли наш DOM Элемент по id vanilla-app и через метод appChild поместили элемент с текстом
+      document.getElementById('vanilla-app').appendChild(vanillaJsHeading)
+    </script>
+  </body>
+</html>
