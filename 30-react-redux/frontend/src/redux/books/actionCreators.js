@@ -1,0 +1,24 @@
+import * as actionTypes from './actionTypes'
+
+export const addBook = (newBook) => {
+  return {
+    // функция принимает обьект книга с его 3 свойствами, и возвращает действие
+    type: actionTypes.ADD_BOOK,
+    payload: newBook,
+  }
+}
+
+export const deleteBook = (id) => {
+  return {
+    type: actionTypes.DELETE_BOOK,
+    payload: id,
+  }
+}
+
+export const toggleFavorite = (id) => {
+  return {
+    type: actionTypes.TOGGLE_FAVORITE,
+    payload: id,
+  }
+}
+//вцв
