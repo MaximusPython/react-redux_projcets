@@ -1,0 +1,58 @@
+.todo {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 2px solid #555;
+  color: black;
+  background-color: beige;
+}
+
+.todoText {
+  width: 100%;
+  text-align: left;
+}
+
+.todoIcon {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  color: rgb(9, 106, 125);
+}
+
+.completedTodo {
+  background-color: unset;
+  border-color: gray;
+  color: gray;
+}
+
+.todo.completedTodo .todoIcon,
+.todo.completedTodo .deleteIcon {
+  color: gray;
+}
+
+.todo.completedTodo .checkIcon:hover {
+  color: rgba(0, 73, 0, 0.729);
+}
+
+.todo.completedTodo .deleteIcon:hover {
+  color: rgb(97, 2, 2);
+}
+
+.checkIcon,
+.deleteIcon {
+  cursor: pointer;
+  color: gray;
+  padding: 0 7px;
+  font-size: 1.8rem;
+  transition: transform 0.3s;
+}
+
+.checkIcon:hover {
+  color: green;
+}
+
+.deleteIcon:hover {
+  color: red;
+}

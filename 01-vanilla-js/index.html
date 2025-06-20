@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS</title>
+    <style>
+      .app {
+        text-align: center;
+      }
+      .blue-btn {
+        color: rgb(236, 236, 242);
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <!-- создали две кнопки обернутые в класс app (которые помещает текст по центру) -->
+      <button id="button" onClick="changeButton('button')">
+        Click me please
+      </button>
+    </div>
+    <script>
+      // эту функцию можно использовать теперь с разными кнопками
+      function changeButton(id) {
+        const myButton = document.getElementById(id)
+        myButton.innerHTML = 'Hello from Vanilla JS'
+        myButton.className = 'blue-btn'
+      }
+    </script>
+  </body>
+</html>

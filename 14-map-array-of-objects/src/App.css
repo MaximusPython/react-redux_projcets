@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.Persons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Person {
+  border: 1px;
+  margin: 15px;
+}
+
+.Person > img {
+  width: 100%;
+}
